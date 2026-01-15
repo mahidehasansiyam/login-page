@@ -60,19 +60,18 @@ body {
 }
 .container label{
   position: absolute;
-  transition: .5s ease all;
+  transition: transform .5s ease;
   top: 20px;
   left: 15px;
-  /* background-color: #f0f2f5; */
   pointer-events: none;
   /* clicking the label will actually click the input behind it. */
 }
 .input-area input:focus + label,
 .input-area input:valid + label{
-  top: -7px;
-  left: 10px;
+  /* top: -7px;
+  left: 10px; */
   font-weight: bold;
-  transform: scale(.8) translateX(5px);   
+  transform: scale(.9) translate(2px , -33px);   
 
 }
 
