@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: bisque;
+}
+
+.container {
+  background-image: url('./backgroung.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* filter: blur(2px); */
+  border-radius: 10px;
+  width: 700px;
+  height: 400px;
+  margin: 200px auto;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding: 0 20px;
+}
+.container .log-in,
+.container .text {
+  flex: 1;
+}
+.container .log-in {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  background: transparent;
+  backdrop-filter: blur(8px);
+  /* making transparent blur so we can see the bg part */
+  border-radius: 10px;
+  padding: 40px 20px;
+}
+.container .text {
+  color: rgb(163, 135, 135);
+}
+.container .text h2 {
+  margin-bottom: 10px;
+}
+.container .text p {
+  margin-bottom: 10px;
+  line-height: 20px;
+}
+.container .text .icon i{
+  margin-right: 10px;
+  cursor: pointer;
+}
+.container .log-in input {
+  padding: 10px 20px;
+  margin-top: 10px;
+  border: none;
+}
+.container .log-in button {
+  width: 100px;
+  margin: 0 auto;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  background: linear-gradient(90deg, #ff5f6d, #ffc371);
+/* background-color: #ff5f6d; */
+  
+}
+.container .log-in button:hover{
+  background: transparent;
+  border: 1px solid #ff5f6d;
+  color: #ff5f6d;
+}
