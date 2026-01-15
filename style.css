@@ -5,6 +5,7 @@
 }
 body {
   background-color: bisque;
+
 }
 
 .container {
@@ -15,7 +16,7 @@ body {
   border-radius: 10px;
   width: 700px;
   height: 400px;
-  margin: 200px auto;
+  margin: 100px auto;
   display: flex;
   flex-direction: row-reverse;
   justify-content: center;
@@ -31,6 +32,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   gap: 20px;
   background: transparent;
   backdrop-filter: blur(8px);
@@ -52,10 +54,35 @@ body {
   margin-right: 10px;
   cursor: pointer;
 }
+.container .input-area{
+  position: relative;
+  width: 100%;
+}
+.container label{
+  position: absolute;
+  transition: .5s ease all;
+  top: 20px;
+  left: 15px;
+  /* background-color: #f0f2f5; */
+  pointer-events: none;
+  /* clicking the label will actually click the input behind it. */
+}
+.input-area input:focus + label,
+.input-area input:valid + label{
+  top: -7px;
+  left: 10px;
+  font-weight: bold;
+  transform: scale(.8) translateX(5px);   
+
+}
+
 .container .log-in input {
   padding: 10px 20px;
-  margin-top: 10px;
+  margin:10px auto 0;
   border: none;
+  width: 100%;
+  border-radius: 10px;
+  outline: none;
 }
 .container .log-in button {
   width: 100px;
