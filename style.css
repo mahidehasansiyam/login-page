@@ -5,7 +5,12 @@
 }
 body {
   background-color: bisque;
-
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+  overflow-x: hidden;
 }
 
 .container {
@@ -50,34 +55,33 @@ body {
   margin-bottom: 10px;
   line-height: 20px;
 }
-.container .text .icon i{
+.container .text .icon i {
   margin-right: 10px;
   cursor: pointer;
 }
-.container .input-area{
+.container .input-area {
   position: relative;
   width: 100%;
 }
-.container label{
+.container label {
   position: absolute;
-  transition: transform .5s ease;
+  transition: transform 0.5s ease;
   top: 20px;
   left: 15px;
   pointer-events: none;
   /* clicking the label will actually click the input behind it. */
 }
 .input-area input:focus + label,
-.input-area input:valid + label{
+.input-area input:valid + label {
   /* top: -7px;
   left: 10px; */
   font-weight: bold;
-  transform: scale(.9) translate(2px , -33px);   
-
+  transform: scale(0.9) translate(2px, -33px);
 }
 
 .container .log-in input {
   padding: 10px 20px;
-  margin:10px auto 0;
+  margin: 10px auto 0;
   border: none;
   width: 100%;
   border-radius: 10px;
@@ -91,11 +95,28 @@ body {
   border-radius: 10px;
   font-weight: bold;
   background: linear-gradient(90deg, #ff5f6d, #ffc371);
-/* background-color: #ff5f6d; */
-  
+  /* background-color: #ff5f6d; */
 }
-.container .log-in button:hover{
+.container .log-in button:hover {
   background: transparent;
   border: 1px solid #ff5f6d;
   color: #ff5f6d;
+}
+
+@media screen and (max-width: 567px) {
+  .container {
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    flex-direction: column-reverse;
+    /* margin: 20px 10px; */
+    padding: 20px 10px;
+  }
+  .container .log-in,
+  .container .text {
+    text-align: center;
+  }
+  .container .log-in {
+    width: 80%;
+  }
 }
